@@ -1,0 +1,20 @@
+.book-grid-wrapper {
+    padding-right: 10vw;
+    padding-left: 10vw;
+}
+
+.book-grid-container {
+    align-items: center;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: $l-size;
+    justify-content: center;
+    margin-top: $l-size;
+    @media (min-width: 45rem) and (max-width: 70rem) {
+        grid-template-columns: 1fr 1fr;
+    }
+    @media (min-width: 70rem) {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+

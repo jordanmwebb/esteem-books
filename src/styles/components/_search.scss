@@ -1,0 +1,31 @@
+.search-container {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    padding-top: $xl-size;
+}
+
+.search-fields {
+    align-items: center;
+    border-radius: .5rem;
+    box-shadow: 0px 0px 14px #a3a3a3;
+    display: flex;
+    height: 16rem;
+    justify-content: center;
+    text-align: center;
+    width: 80vw;
+}
+
+.search-box {
+    width: 15rem;
+    height: 44px;
+    padding-left: $s-size;
+    @media (min-width: $desktop-breakpoint) {
+        width: 30vw;
+    }
+}
+
+.search-filter {
+    height: 44px;
+    width: 10rem;
+}

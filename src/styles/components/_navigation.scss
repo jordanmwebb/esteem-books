@@ -1,0 +1,48 @@
+.nav-links-container {
+    display: flex;
+    justify-content: space-evenly;
+    padding-left: 0;
+    list-style: none;
+}
+
+.nav-links {
+    font-size: $font-size-large;
+    font-weight: bold;
+    position: relative;
+    text-decoration: none;
+}
+
+.nav-links__search {
+    color: $rose;
+}
+
+.nav-links__my-library {
+    color: $plum;
+}
+
+.nav-links__logout {
+    color: $purple;
+}
+
+.nav-links::after {
+    content: '';
+    width: 100%;
+    height: 3px;
+    background: $main-gradient;
+    position: absolute;
+    bottom: 0%;
+    left: 0;
+    
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 250ms ease-in;
+}
+
+.nav-links:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+.nav-links__logout:hover {
+    cursor: pointer;
+}

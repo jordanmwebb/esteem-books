@@ -1,0 +1,17 @@
+.button {
+    background: $orange;
+    border: none;
+    border-radius: 3px;
+    color: white;
+    font-size: $font-size-large;
+    padding: $s-size;
+    text-decoration: none;
+}
+
+.button__search {
+    margin: $s-size;
+    width: 10rem;
+    @media (min-width: $desktop-breakpoint) {
+        width: 10vw;
+    }    
+}
