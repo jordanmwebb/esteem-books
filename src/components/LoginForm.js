@@ -31,7 +31,7 @@ const LoginForm = () => {
     return (
     <div className="background-layout">
         <div className="box-layout">
-            <h1>Esteem</h1>
+            <h1 className="esteem-header">Esteem</h1>
             <div className="thin-line"></div>
             <p>The Modern Library</p>
             {signedIn ?

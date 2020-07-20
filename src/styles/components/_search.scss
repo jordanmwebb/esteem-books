@@ -10,10 +10,14 @@
     border-radius: .5rem;
     box-shadow: 0px 0px 14px #a3a3a3;
     display: flex;
+    flex-wrap: wrap;
     height: 16rem;
     justify-content: center;
     text-align: center;
     width: 80vw;
+    @media (max-width: 576px) {
+        padding-bottom: 18rem;
+    }
 }
 
 .search-box {
@@ -28,4 +32,24 @@
 .search-filter {
     height: 44px;
     width: 10rem;
+}
+
+@media (max-width: 576px) {
+    .search-box {
+        width: 80vw;
+        margin-top: $s-size;
+        margin-left: $s-size;
+        margin-right: $s-size;
+        text-align: center;
+        padding-left: 0;
+    }
+    .button__search {
+        width: 80vw;
+        text-align: center;
+    }
+    .search-filter {
+        width: 80vw;
+        margin-left: $s-size;
+        margin-right: $s-size;
+    }
 }

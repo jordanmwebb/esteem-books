@@ -11,7 +11,14 @@
 .button__search {
     margin: $s-size;
     width: 10rem;
+    text-align: center;
     @media (min-width: $desktop-breakpoint) {
         width: 10vw;
     }    
+}
+
+@media (max-width: 400px) {
+    .google-button .firebaseui-idp-text {
+        font-size: 12px;
+    }
 }

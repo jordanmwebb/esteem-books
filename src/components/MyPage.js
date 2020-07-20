@@ -62,7 +62,7 @@ const MyPage = () => {
                                         <h2 className="book-card_title">{book.title}</h2>
                                         <h3 className="book-card_author">Author: {book.author}</h3>
                                         <p>Published Date: {book.published}</p>
-                                        <button id={book.id} onClick={deleteItem} className="book-card_button"><i id={book.id} class="fas fa-times"></i>Remove</button>
+                                        <button id={book.id} onClick={deleteItem} className="book-card_button"><i id={book.id} className="fas fa-times"></i>Remove</button>
                                     </div>
                                 </div>
                             )}
