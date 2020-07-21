@@ -6,7 +6,7 @@ const BookCard = ({image, ISBN, title, author, published}) => {
 
     const [userId] = useContext(UserContext);
 
-    // Add book info to firestore when button is clicked //
+    // Adds book info to firestore when button is clicked - this data will be used to populate personal library //
     const saveBook = () => {
 
         firebase.firestore().collection('users').doc(`${userId}`).collection('books').add({
@@ -18,7 +18,7 @@ const BookCard = ({image, ISBN, title, author, published}) => {
         })
     }
 
-    //  Return a card with image and description information for each book //
+    //  Returns a card with image and description information for each individual book //
     return (
         <div className="book-card_container">
             <div className="book-card_image">

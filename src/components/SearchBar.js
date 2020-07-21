@@ -1,5 +1,6 @@
 import React from 'react';
 
+// Displays search component which includes text field, search button and sort list
 const SearchBar = ({handleSearch, searchBook, handleSort}) => {
     return (
         <div className="search-container">

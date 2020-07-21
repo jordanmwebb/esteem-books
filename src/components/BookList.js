@@ -1,7 +1,7 @@
 import React from 'react';
 import BookCard from './BookCard';
 
-// Map over list of returned search results. Return a single card for each item //
+// Maps over list of returned search results. Returns a single card for each item //
 const BookList = ({books}) => {
     return (
         <div className="book-grid-center">

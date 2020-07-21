@@ -7,12 +7,15 @@ import { UserContext } from '../context/UserContext';
 const Navigation = () => {
     const [signedIn, setSignedIn] = useContext(UserContext);
 
+    // Triggered when the Log Out button is clicked. Sets signed in state to false
     const handleLogOut = () => {
         firebase.auth().signOut();
         setSignedIn(false);
         console.log('signed out')
     }
 
+    // Redirects to login page is no user is signed in
+    // If authorized, displays nav bar
     return (
         <nav>
                 {signedIn === false ?

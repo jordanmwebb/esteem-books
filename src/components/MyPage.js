@@ -7,6 +7,7 @@ function useBooks() {
     const [personalBooks, setPersonalBooks] = useContext(BookContext);
     const [userId] = useContext(UserContext);
 
+    // Monitors the collection of books stored in firebase for the user & stores them in the state for the current user's personal collection
     useEffect(() => {
         const unsubscribe = firebase
             .firestore()
@@ -27,15 +28,11 @@ function useBooks() {
     return personalBooks
 }
 
-// Get specific item key
-// Remove item from DB
-// Iterate back over personalBooks
-// Display new personalBooks list
-
 const MyPage = () => {
     const books = useBooks();
     const [userId] = useContext(UserContext);
     
+    // Pulls the ID associated with the book that is clicked and deletes the book from firebase using the document ID.
     const deleteItem = async (e) => {
         const bookId = e.target.id;
         let singleItem = await firebase
@@ -47,6 +44,8 @@ const MyPage = () => {
         return singleItem
      }
 
+    // Maps over books in users personal list on firebase and renders a list of book cards
+    // Includes a delete button for each book that triggers the delete function
     return (
         <div>
             <h1 className="page-header">My Favorites</h1>

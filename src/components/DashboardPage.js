@@ -8,15 +8,18 @@ const DashboardPage = () => {
     const [books, setBooks] = useState([])
     const [sort, setSort] = useState('')
 
+    // Sets the query directed to Google Books equal to the value typed in the search field
     const handleSearch = (e) => {
         setSearch(e.target.value)
     }
 
+    // Sets sort parameter equal to the option selected in the sort drop-down
     const handleSort = (e) => {
         console.log(e.target.value);
         setSort(e.target.value);
     }
 
+    // Checks to make sure book data contains a date, thumbnail image, and author. Assigns a value if one is missing
     const cleanData = (data) => {
         const cleanedData = data.body.items.map((book) => {
             if(book.volumeInfo.hasOwnProperty('publishedDate') === false) {
@@ -36,7 +39,8 @@ const DashboardPage = () => {
 
         return cleanedData;
     }
-
+    
+    // Performs a get request, using superagent, to Google Books API & stores results in local state
     const searchBook = (e) => {
         e.preventDefault();
         request
@@ -49,6 +53,7 @@ const DashboardPage = () => {
             })
     }
 
+    // Sorts books by published date from highest to lowest or lowest to highest
     const sortedBooks = books.sort((a, b) => {
         if(sort === 'Newest') {
             return parseInt(b.volumeInfo.publishedDate.substring(0,4)) - parseInt(a.volumeInfo.publishedDate.substring(0,4))
